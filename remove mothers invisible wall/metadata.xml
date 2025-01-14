@@ -4,7 +4,7 @@
     <directory>remove mothers invisible wall</directory>
     <id>2936070794</id>
     <description>After defeating Mother, if you leave the room and come back, you'll notice that it still appears to be a 1x2 room. However, there's an invisible wall at the bottom of the screen preventing access to the lower part of the room. This mod gives you continued access to the entire room.</description>
-    <version>1.2</version>
+    <version>1.3</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Rooms"/>

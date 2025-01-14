@@ -42,13 +42,14 @@ function mod:isMother()
     stageType = StageAPI.CurrentStage.LevelgenStage.StageType
   end
   
+  -- ROOM_SECRET_EXIT_IDX or ROOM_DEBUG_IDX
   return not game:IsGreedMode() and
          (stage == LevelStage.STAGE4_2 or stage == LevelStage.STAGE4_1) and
          (stageType == StageType.STAGETYPE_REPENTANCE or stageType == StageType.STAGETYPE_REPENTANCE_B) and
          roomDesc.Data.Shape == RoomShape.ROOMSHAPE_1x2 and
          roomDesc.Data.Type == RoomType.ROOM_BOSS and
-         roomDesc.Data.Variant == 1 and
-         roomDesc.Data.Name == 'Mother' -- ROOM_SECRET_EXIT_IDX or ROOM_DEBUG_IDX
+         roomDesc.Data.StageID == 33 and -- corpse
+         roomDesc.Data.Variant == 1      -- Mother
 end
 
 mod:AddCallback(ModCallbacks.MC_PRE_ROOM_ENTITY_SPAWN, mod.onPreNewRoom)
